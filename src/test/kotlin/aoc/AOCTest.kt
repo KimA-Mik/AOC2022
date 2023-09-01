@@ -14,7 +14,6 @@ class AOCTest {
         assertEquals(45000, aoc01.countTopThreeCalories(sample))
     }
 
-
     @Test
     fun testDay02() {
         val aoc02 = AOC02()
@@ -28,4 +27,18 @@ class AOCTest {
         assertEquals(12, sum)
     }
 
+    @Test
+    fun testDay03() {
+        val aoc03 = AOC03()
+        val sample = File("./input/03/sample.txt").readLines()
+        var sum = 0
+        sample.forEach { sum += aoc03.analyseRucksack(it) }
+        assertEquals(157, sum)
+
+        sum = 0
+        for (i in sample.indices step 3) {
+            sum += aoc03.analyseSimilarities(sample.subList(i, i + 3))
+        }
+        assertEquals(70, sum)
+    }
 }
