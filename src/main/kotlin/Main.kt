@@ -5,6 +5,7 @@ fun main() {
     day01()
     day02()
     day03()
+    day04()
 }
 
 fun day01() {
@@ -39,5 +40,26 @@ fun day03() {
     for (i in input.indices step 3) {
         sum += aoc03.analyseSimilarities(input.subList(i, i + 3))
     }
-    println("AoC Day 03 Puzzle 3 - $sum")
+    println("AoC Day 03 Puzzle 3 - $sum\n")
+}
+
+fun day04() {
+    val input = File("./input/04/input.txt").readLines()
+    val aoc04 = AOC04()
+    var sum = 0
+
+    input.forEach {
+        if (aoc04.doesSectorFullyContainOther(it)) {
+            sum += 1
+        }
+    }
+    println("AoC Day 04 Puzzle 1 - $sum")
+
+    sum = 0
+    input.forEach {
+        if (aoc04.doSectorsOverlap(it)) {
+            sum += 1
+        }
+    }
+    println("AoC Day 04 Puzzle 2 - $sum\n")
 }

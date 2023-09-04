@@ -1,6 +1,5 @@
 package aoc
 
-
 class AOC01 {
     fun countMaxCalories(lines: List<String>): Int {
         var max = 0

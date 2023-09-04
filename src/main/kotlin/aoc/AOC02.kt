@@ -1,6 +1,5 @@
 package aoc
 
-
 class AOC02 {
     private enum class RSP(val score: Int) {
         Rock(1),

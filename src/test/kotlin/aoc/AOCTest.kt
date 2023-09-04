@@ -41,4 +41,25 @@ class AOCTest {
         }
         assertEquals(70, sum)
     }
+
+    @Test
+    fun testDay04() {
+        val aoc04 = AOC04()
+        val sample = File("./input/04/sample.txt").readLines()
+        var sum = 0
+        sample.forEach {
+            if (aoc04.doesSectorFullyContainOther(it)) {
+                sum += 1
+            }
+        }
+        assertEquals(2, sum)
+
+        sum = 0
+        sample.forEach {
+            if (aoc04.doSectorsOverlap(it)) {
+                sum += 1
+            }
+        }
+        assertEquals(4, sum)
+    }
 }
