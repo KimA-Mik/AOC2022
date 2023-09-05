@@ -62,4 +62,16 @@ class AOCTest {
         }
         assertEquals(4, sum)
     }
+
+    @Test
+    fun testDay05() {
+        val aoc05 = AOC05()
+        val sample = File("./input/05/sample.txt").readLines()
+
+        aoc05.parseInputFile(sample)
+        assertEquals("CMZ", aoc05.evaluateOperations())
+        aoc05.parseInputFile(sample)
+        assertEquals("MCD", aoc05.evaluateOperationsWithMultiplePickup())
+    }
+
 }

@@ -6,6 +6,7 @@ fun main() {
     day02()
     day03()
     day04()
+    day05()
 }
 
 fun day01() {
@@ -62,4 +63,13 @@ fun day04() {
         }
     }
     println("AoC Day 04 Puzzle 2 - $sum\n")
+}
+
+fun day05() {
+    val aoc05 = AOC05()
+    val input = File("./input/05/input.txt").readLines()
+    aoc05.parseInputFile(input)
+    println("AoC Day 05 Puzzle 1 - ${aoc05.evaluateOperations()}")
+    aoc05.parseInputFile(input)
+    println("AoC Day 05 Puzzle 2 - ${aoc05.evaluateOperationsWithMultiplePickup()}\n")
 }
