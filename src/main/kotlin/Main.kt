@@ -9,15 +9,20 @@ fun main() {
     day05()
 }
 
+private fun getInputLines(dayNum: Int): List<String> {
+    val path = "./input/%02d/input.txt".format(dayNum)
+    return File(path).readLines()
+}
+
 fun day01() {
-    val input = File("./input/01/input.txt").readLines()
+    val input = getInputLines(1)
     val aoC01 = AOC01()
     println("AoC Day 01 Puzzle 1 - ${aoC01.countMaxCalories(input)}")
     println("AoC Day 01 Puzzle 2 - ${aoC01.countTopThreeCalories(input)}\n")
 }
 
 fun day02() {
-    val input = File("./input/02/input.txt").readLines()
+    val input = getInputLines(2)
     val aoC02 = AOC02()
     var sum = 0
 
@@ -30,7 +35,7 @@ fun day02() {
 }
 
 fun day03() {
-    val input = File("./input/03/input.txt").readLines()
+    val input = getInputLines(3)
     val aoc03 = AOC03()
     var sum = 0
 
@@ -45,7 +50,7 @@ fun day03() {
 }
 
 fun day04() {
-    val input = File("./input/04/input.txt").readLines()
+    val input = getInputLines(4)
     val aoc04 = AOC04()
     var sum = 0
 
@@ -67,7 +72,7 @@ fun day04() {
 
 fun day05() {
     val aoc05 = AOC05()
-    val input = File("./input/05/input.txt").readLines()
+    val input = getInputLines(5)
     aoc05.parseInputFile(input)
     println("AoC Day 05 Puzzle 1 - ${aoc05.evaluateOperations()}")
     aoc05.parseInputFile(input)

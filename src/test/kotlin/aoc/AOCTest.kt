@@ -6,10 +6,15 @@ import kotlin.test.assertEquals
 
 class AOCTest {
 
+    private fun getSampleLines(dayNum: Int): List<String> {
+        val path = "./input/%02d/sample.txt".format(dayNum)
+        return File(path).readLines()
+    }
+
     @Test
     fun testDay01() {
         val aoc01 = AOC01()
-        val sample = File("./input/01/sample.txt").readLines()
+        val sample = getSampleLines(1)
         assertEquals(24000, aoc01.countMaxCalories(sample))
         assertEquals(45000, aoc01.countTopThreeCalories(sample))
     }
@@ -17,7 +22,7 @@ class AOCTest {
     @Test
     fun testDay02() {
         val aoc02 = AOC02()
-        val sample = File("./input/02/sample.txt").readLines()
+        val sample = getSampleLines(2)
         var sum = 0
         sample.forEach { sum += aoc02.evaluateStrategy(it) }
         assertEquals(15, sum)
@@ -30,7 +35,7 @@ class AOCTest {
     @Test
     fun testDay03() {
         val aoc03 = AOC03()
-        val sample = File("./input/03/sample.txt").readLines()
+        val sample = getSampleLines(3)
         var sum = 0
         sample.forEach { sum += aoc03.analyseRucksack(it) }
         assertEquals(157, sum)
@@ -45,7 +50,7 @@ class AOCTest {
     @Test
     fun testDay04() {
         val aoc04 = AOC04()
-        val sample = File("./input/04/sample.txt").readLines()
+        val sample = getSampleLines(4)
         var sum = 0
         sample.forEach {
             if (aoc04.doesSectorFullyContainOther(it)) {
@@ -66,7 +71,7 @@ class AOCTest {
     @Test
     fun testDay05() {
         val aoc05 = AOC05()
-        val sample = File("./input/05/sample.txt").readLines()
+        val sample = getSampleLines(5)
 
         aoc05.parseInputFile(sample)
         assertEquals("CMZ", aoc05.evaluateOperations())
