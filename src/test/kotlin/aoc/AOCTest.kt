@@ -79,4 +79,21 @@ class AOCTest {
         assertEquals("MCD", aoc05.evaluateOperationsWithMultiplePickup())
     }
 
+    @Test
+    fun testDay06() {
+        val aoc06 = AOC06()
+        val sample = getSampleLines(6)
+
+        assertEquals(7, aoc06.getStartOfPocketMarkerPosition(sample[0]))
+        assertEquals(5, aoc06.getStartOfPocketMarkerPosition(sample[1]))
+        assertEquals(6, aoc06.getStartOfPocketMarkerPosition(sample[2]))
+        assertEquals(10, aoc06.getStartOfPocketMarkerPosition(sample[3]))
+        assertEquals(11, aoc06.getStartOfPocketMarkerPosition(sample[4]))
+
+        assertEquals(19, aoc06.getStartOfMessageMarkerPosition(sample[0]))
+        assertEquals(23, aoc06.getStartOfMessageMarkerPosition(sample[1]))
+        assertEquals(23, aoc06.getStartOfMessageMarkerPosition(sample[2]))
+        assertEquals(29, aoc06.getStartOfMessageMarkerPosition(sample[3]))
+        assertEquals(26, aoc06.getStartOfMessageMarkerPosition(sample[4]))
+    }
 }

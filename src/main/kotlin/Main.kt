@@ -7,6 +7,7 @@ fun main() {
     day03()
     day04()
     day05()
+    day06()
 }
 
 private fun getInputLines(dayNum: Int): List<String> {
@@ -77,4 +78,12 @@ fun day05() {
     println("AoC Day 05 Puzzle 1 - ${aoc05.evaluateOperations()}")
     aoc05.parseInputFile(input)
     println("AoC Day 05 Puzzle 2 - ${aoc05.evaluateOperationsWithMultiplePickup()}\n")
+}
+
+fun day06() {
+    val aoc06 = AOC06()
+    val input = getInputLines(6)
+    println("AoC Day 06 Puzzle 1 - ${aoc06.getStartOfPocketMarkerPosition(input[0])}")
+    println("AoC Day 06 Puzzle 2 - ${aoc06.getStartOfMessageMarkerPosition(input[0])}")
+    println()
 }
