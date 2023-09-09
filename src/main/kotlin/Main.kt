@@ -8,6 +8,7 @@ fun main() {
     day04()
     day05()
     day06()
+    day07()
 }
 
 private fun getInputLines(dayNum: Int): List<String> {
@@ -84,6 +85,13 @@ fun day06() {
     val aoc06 = AOC06()
     val input = getInputLines(6)
     println("AoC Day 06 Puzzle 1 - ${aoc06.getStartOfPocketMarkerPosition(input[0])}")
-    println("AoC Day 06 Puzzle 2 - ${aoc06.getStartOfMessageMarkerPosition(input[0])}")
-    println()
+    println("AoC Day 06 Puzzle 2 - ${aoc06.getStartOfMessageMarkerPosition(input[0])}\n")
+}
+
+fun day07() {
+    val aoC07 = AOC07()
+    val input = getInputLines(7)
+    aoC07.constructFileSystemFromCommands(input)
+    println("AoC Day 07 Puzzle 1 - ${aoC07.calculateSizeofSmallDirs()}")
+    println("AoC Day 06 Puzzle 2 - ${aoC07.calculateMinSpace()}\n")
 }

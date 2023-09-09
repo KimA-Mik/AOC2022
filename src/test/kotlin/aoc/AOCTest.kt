@@ -96,4 +96,13 @@ class AOCTest {
         assertEquals(29, aoc06.getStartOfMessageMarkerPosition(sample[3]))
         assertEquals(26, aoc06.getStartOfMessageMarkerPosition(sample[4]))
     }
+
+    @Test
+    fun testDay07(){
+        val aoc07 = AOC07()
+        val sample = getSampleLines(7)
+        aoc07.constructFileSystemFromCommands(sample)
+        assertEquals(95437u, aoc07.calculateSizeofSmallDirs())
+        assertEquals(24933642u, aoc07.calculateMinSpace())
+    }
 }
