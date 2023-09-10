@@ -9,6 +9,7 @@ fun main() {
     day05()
     day06()
     day07()
+    day08()
 }
 
 private fun getInputLines(dayNum: Int): List<String> {
@@ -93,5 +94,12 @@ fun day07() {
     val input = getInputLines(7)
     aoC07.constructFileSystemFromCommands(input)
     println("AoC Day 07 Puzzle 1 - ${aoC07.calculateSizeofSmallDirs()}")
-    println("AoC Day 06 Puzzle 2 - ${aoC07.calculateMinSpace()}\n")
+    println("AoC Day 07 Puzzle 2 - ${aoC07.calculateMinSpace()}\n")
+}
+
+fun day08() {
+    val aoc08 = AOC08()
+    val input = getInputLines(8)
+    println("AoC Day 08 Puzzle 1 - ${aoc08.countVisibleTrees(input)}")
+    println("AoC Day 08 Puzzle 2 - ${aoc08.computeHighestScenicScore()}\n")
 }

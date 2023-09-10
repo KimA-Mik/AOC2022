@@ -98,11 +98,19 @@ class AOCTest {
     }
 
     @Test
-    fun testDay07(){
+    fun testDay07() {
         val aoc07 = AOC07()
         val sample = getSampleLines(7)
         aoc07.constructFileSystemFromCommands(sample)
         assertEquals(95437u, aoc07.calculateSizeofSmallDirs())
         assertEquals(24933642u, aoc07.calculateMinSpace())
+    }
+
+    @Test
+    fun testDay08() {
+        val aoc08 = AOC08()
+        val sample = getSampleLines(8)
+        assertEquals(21, aoc08.countVisibleTrees(sample))
+        assertEquals(8, aoc08.computeHighestScenicScore())
     }
 }
