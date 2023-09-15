@@ -10,6 +10,7 @@ fun main() {
     day06()
     day07()
     day08()
+    day09()
 }
 
 private fun getInputLines(dayNum: Int): List<String> {
@@ -102,4 +103,11 @@ fun day08() {
     val input = getInputLines(8)
     println("AoC Day 08 Puzzle 1 - ${aoc08.countVisibleTrees(input)}")
     println("AoC Day 08 Puzzle 2 - ${aoc08.computeHighestScenicScore()}\n")
+}
+
+fun day09() {
+    val aoc09 = AOC09()
+    val input = getInputLines(9)
+    println("AoC Day 09 Puzzle 1 - ${aoc09.calculateVisitedPositions(input)}")
+    println("AoC Day 09 Puzzle 2 - ${aoc09.calculateVisitedPositionsForLongerRope(input)}\n")
 }

@@ -113,4 +113,14 @@ class AOCTest {
         assertEquals(21, aoc08.countVisibleTrees(sample))
         assertEquals(8, aoc08.computeHighestScenicScore())
     }
+
+    @Test
+    fun testDay09() {
+        val aoc09 = AOC09()
+        val sample = getSampleLines(9)
+        assertEquals(13, aoc09.calculateVisitedPositions(sample))
+        assertEquals(1, aoc09.calculateVisitedPositionsForLongerRope(sample))
+        val largerSample = File("./input/09/larger_sample.txt").readLines()
+        assertEquals(36, aoc09.calculateVisitedPositionsForLongerRope(largerSample))
+    }
 }
