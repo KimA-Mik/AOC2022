@@ -123,4 +123,21 @@ class AOCTest {
         val largerSample = File("./input/09/larger_sample.txt").readLines()
         assertEquals(36, aoc09.calculateVisitedPositionsForLongerRope(largerSample))
     }
+
+    @Test
+    fun testDay10() {
+        val aoc10 = AOC10()
+        val sample = getSampleLines(10)
+        aoc10.executeProgram(sample)
+        assertEquals(13140, aoc10.signalStrengthDump)
+        val screen = "##..##..##..##..##..##..##..##..##..##.." +
+                "###...###...###...###...###...###...###." +
+                "####....####....####....####....####...." +
+                "#####.....#####.....#####.....#####....." +
+                "######......######......######......####" +
+                "#######.......#######.......#######....."
+
+        aoc10.printScreen()
+        assertEquals(screen, aoc10.getScreenString())
+    }
 }
