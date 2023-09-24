@@ -2,6 +2,7 @@ package aoc
 
 import org.junit.jupiter.api.Test
 import java.io.File
+import kotlin.random.Random
 import kotlin.test.assertEquals
 
 class AOCTest {
@@ -139,5 +140,30 @@ class AOCTest {
 
         aoc10.printScreen()
         assertEquals(screen, aoc10.getScreenString())
+    }
+
+    @Test
+    fun testMonkeys() {
+        val div = 19L
+        var a = 10L
+        var b = a % div
+        repeat(20) {
+            val mul = Random.nextLong(1, 6)
+            a *= mul
+            b = (b * mul) % div
+            assertEquals(a % div, b)
+        }
+    }
+
+    @Test
+    fun testDay11() {
+        val aoc11 = AOC11()
+        val sample = getSampleLines(11)
+        aoc11.loadMonkeys(sample)
+        assertEquals(10605, aoc11.doMonkeyBusiness())
+        aoc11.loadMonkeys(sample)
+        assertEquals(10605, aoc11.doMonkeyStuff())
+        aoc11.loadMonkeys(sample)
+        assertEquals(2713310158L, aoc11.duMoreMonkeyBusiness())
     }
 }
